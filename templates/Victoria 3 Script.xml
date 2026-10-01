@@ -1,0 +1,177 @@
+<templateSet group="Victoria 3 Script">
+  <template name="amendment_vic3" value="$amendment_key$ = {&#10;&#9;parent = law_key # optional&#10;&#9;&#10;&#9;allowed_laws = {&#10;&#9;}&#10;&#9;&#10;&#9;modifier = {&#10;&#9;}&#10;&#9;&#10;&#9;possible = {&#10;&#9;}&#10;&#9;&#10;&#9;would_sponsor = {}&#10;&#9;&#10;&#9;amendment_activism_multiplier = 1.0&#10;&#9;&#10;&#9;on_activate = {&#10;&#9;}&#10;&#9;&#10;&#9;on_deactivate = {&#10;&#9;}&#10;}" description="Amendment Definition" toReformat="true" toShortenFQNames="true">
+    <variable name="amendment_key" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PARADOX_SCRIPT" value="true" />
+      <option name="PARADOX_SCRIPT_INLINE_MATH_EXPRESSIONS" value="false" />
+    </context>
+  </template>
+  <template name="building_vic3" value="$building_key$ = {&#10;&#9;building_group = bg_key&#10;&#9;icon =&#10;&#9;background =&#10;&#9;&#10;&#9;buildable = # yes/no&#10;&#9;expandable = # yes/no&#10;&#9;downsizeable = # yes/no&#10;&#9;unique = # yes/no&#10;&#9;has_max_level = # yes/no&#10;&#9;ownership_type = # no_ownership/self/other&#10;&#9;&#10;&#9;unlocking_technologies = {&#10;&#9;}&#10;&#9;&#10;&#9;potential = {&#10;&#9;}&#10;&#9;&#10;&#9;possible = {&#10;&#9;}&#10;&#9;&#10;&#9;can_build = {&#10;&#9;}&#10;&#9;&#10;&#9;can_have_country_monopoly = {&#10;&#9;}&#10;&#9;&#10;&#9;construction_points = int32&#10;&#9;construction_modifier = {&#10;&#9;}&#10;&#9;&#10;&#9;production_methods = {&#10;&#9;}&#10;&#9;&#10;&#9;ai_value = script value&#10;&#9;ai_privatization_deisre = script value&#10;}" description="Building Definition" toReformat="true" toShortenFQNames="true">
+    <variable name="building_key" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PARADOX_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="event_base_vic3" value="$event_id$ = {&#10;&#9;type = country_event&#10;&#9;placement = root&#10;&#9;icon = &#10;&#9;duration = 3&#10;&#9;dlc = # optional&#10;&#9;&#10;&#9;title = $event_id$.t&#10;&#9;desc = $event_id$.d&#10;&#9;flavor = $event_id$.f&#10;&#9;&#10;&#9;event_image = {&#10;&#9;&#9;video = &quot;media_alias&quot;&#10;&#9;}&#10;&#9;on_created_soundeffect = &quot;event:/SFX/UI/Alerts/event_appear&quot;&#10;&#9;&#10;&#9;trigger = {&#10;&#9;}&#10;&#9;&#10;&#9;cancellation_trigger = {&#10;&#9;}&#10;&#9;&#10;&#9;cooldown = {&#10;&#9;&#9;# warning: any empty cooldown blocks will brick your event file!!&#10;&#9;}&#10;&#9;&#10;&#9;immediate = {&#10;&#9;}&#10;&#9;&#10;&#9;option = {&#10;&#9;&#9;name = $event_id$.a&#10;&#9;&#9;default_option = yes&#10;&#9;}&#10;&#10;&#9;option = {&#10;&#9;&#9;name = $event_id$.b&#10;&#9;}&#10;&#9;&#10;&#9;after = {&#10;&#9;}&#10;}" description="Basic Event" toReformat="true" toShortenFQNames="true">
+    <variable name="event_id" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PARADOX_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="event_hidden_vic3" value="$event_id$ = {&#10;&#9;type = country_event&#10;&#9;hidden = yes&#10;&#9;&#10;&#9;trigger = {&#10;&#9;}&#10;&#10;&#9;immediate = {&#10;&#9;}&#10;}" description="Hidden Event" toReformat="true" toShortenFQNames="true">
+    <variable name="event_id" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PARADOX_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="scripted_button_vic3" value="$scripted_button$ = {&#10;&#9;name = &quot;temp_name&quot;&#10;&#9;desc = &quot;temp_desc&quot;&#10;&#9;&#10;&#9;visible = {&#10;&#9;}&#10;&#9;&#10;&#9;selected = {&#10;&#9;}&#10;&#9;&#10;&#9;possible = {&#10;&#9;}&#10;&#9;&#10;&#9;effect = {&#10;&#9;}&#10;&#9;&#10;&#9;ai_chance = {&#10;&#9;&#9;base = 0&#10;&#9;&#9;modifier = {&#10;&#9;&#9;&#9;trigger = {}&#10;&#9;&#9;&#9;add = 0&#10;&#9;&#9;}&#10;&#9;}&#10;}" description="Scripted Button Definition" toReformat="true" toShortenFQNames="true">
+    <variable name="scripted_button" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PARADOX_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="character_trait_vic3" value="$trait_template$ = {&#10;&#9;type = # skill/personality/condition&#10;&#9;texture = &#10;&#9;&#10;&#9;character_modifier = {&#10;&#9;}&#10;&#9;&#10;&#9;country_modifier = {&#10;&#9;}&#10;&#9;&#10;&#9;command_modifier = {&#10;&#9;}&#10;&#9;&#10;&#9;interest_group_modifier = {&#10;&#9;}&#10;&#9;&#10;&#9;agitator_modifier = {&#10;&#9;}&#10;&#9;&#10;&#9;possible = {&#10;&#9;&#9;always = no&#10;&#9;}&#10;&#9;&#10;&#9;weight = {&#10;&#9;&#9;value = 0&#10;&#9;}&#10;&#9;&#10;&#9;replace = {&#10;&#9;}&#10;&#9;&#10;&#9;value = 0 # remove for conditions&#10;}" description="Character Trait Definition" toReformat="true" toShortenFQNames="true">
+    <variable name="trait_template" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PARADOX_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="character_interaction_vic3" value="$character_interation$ = {&#10;&#9;icon = &#10;&#9;clicksound = &quot;event:/SFX/&quot;&#10;&#10;&#9;potential = {&#10;&#9;}&#10;&#10;&#9;possible = {&#10;&#9;}&#10;&#10;&#9;effect = {&#10;&#9;}&#10;&#10;&#9;ai_chance = {&#10;&#9;}&#10;}" description="Character Interaction Definition" toReformat="true" toShortenFQNames="true">
+    <variable name="character_interation" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PARADOX_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="country_formable_vic3" value="$TAG$ = {&#10;&#9;states = {&#10;&#9;}&#10;&#9;required_states_fraction = &#10;&#9;&#10;&#9;potential = {&#10;&#9;}&#10;&#9;&#10;&#9;possible = {&#10;&#9;}&#10;&#9;&#10;&#9;ai_will_do = {&#10;&#9;}&#10;}" description="Formable Country Definition" toReformat="true" toShortenFQNames="true">
+    <variable name="TAG" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PARADOX_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="country_definition_vic3" value=" $TAG$ = {&#10;&#9;color = rgb{ 0 0 0 }&#10;&#9;country_type = &#10;&#9;tier = &#10;&#9;cultures = {  }&#10;&#9;capital = STATE_REGION&#10;}" description="Country Definition" toReformat="true" toShortenFQNames="true">
+    <variable name="TAG" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PARADOX_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="country_releasable_vic3" value="$TAG$ = {&#10;&#9;states = {&#10;&#9;}&#10;&#9;required_num_states = &#10;&#9;&#10;&#9;possible = {&#10;&#9;}&#10;&#9;&#10;&#9;ai_will_do = { always = no }&#10;}" description="Releasable Country Definition" toReformat="true" toShortenFQNames="true">
+    <variable name="TAG" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PARADOX_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="culture_vic3" value="$culture$ = {&#10;&#9;color= hsv{ 0 0 0 }&#10;&#9;religion = &#10;&#9;heritage = &#10;&#9;language = &#10;&#9;traditions = { }&#10;&#10;&#9;obsessions = { }&#10;&#9;taboos = { }&#10;&#9;&#10;&#9;male_common_first_names = {&#10;&#9;}&#10;&#9;female_common_first_names = {&#10;&#9;}&#10;&#9;common_last_names = {&#10;&#9;}&#10;&#9;&#10;&#9;noble_last_names = {&#10;&#9;}&#10;&#9;&#10;&#9;male_regal_first_names = {&#10;&#9;}&#10;&#9;female_regal_first_names = {&#10;&#9;}&#10;&#9;regal_last_names = {&#10;&#9;}&#10;&#10;&#9;graphics = &#10;&#9;ethnicities = {&#10;&#9;}&#10;}" description="Culture Definition" toReformat="true" toShortenFQNames="true">
+    <variable name="culture" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PARADOX_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="journal_entry_base_vic3" value="$journal_entry_key$ = {&#10;&#9;group = je_group_&#10;&#9;icon = &quot;gfx/interface/icons/event_icons/event_&quot;&#10;&#9;weight = 100&#10;&#9;&#10;&#9;should_be_pinned_by_default_uninvolved_or_context = yes&#10;&#9;can_revolution_inherit = yes&#10;&#9;transferable = no&#10;&#9;can_deactivate = no&#10;&#9;&#10;&#9;is_shown_in_lobby = {&#10;&#9;}&#10;&#9;&#10;&#9;scripted_progress_bar =&#10;&#9;&#10;&#9;scripted_button =&#10;&#9;&#10;&#9;is_shown_when_inactive = {&#10;&#9;}&#10;&#9;&#10;&#9;possible = {&#10;&#9;}&#10;&#9;&#10;&#9;immediate = {&#10;&#9;}&#10;&#9;&#10;&#9;modifiers_while_active = {&#10;&#9;}&#10;&#9;&#10;&#9;complete = {&#10;&#9;}&#10;&#9;&#10;&#9;on_complete = {&#10;&#9;}&#10;&#9;&#10;&#9;fail = {&#10;&#9;}&#10;&#9;&#10;&#9;on_fail = {&#10;&#9;}&#10;&#9;&#10;&#9;timeout =&#10;&#9;&#10;&#9;on_timeout = {&#10;&#9;}&#10;&#9;&#10;&#9;invalid = {&#10;&#9;}&#10;&#9;&#10;&#9;on_invalid = {&#10;&#9;}&#10;&#9;&#10;&#9;on_weekly_pulse = {&#10;&#9;&#9;events = {&#10;&#9;&#9;}&#10;&#9;&#9;random_events = {&#10;&#9;&#9;}&#10;&#9;&#9;effect = {&#10;&#9;&#9;}&#10;&#9;}&#10;&#9;&#10;&#9;on_monthly_pulse = {&#10;&#9;&#9;events = {&#10;&#9;&#9;}&#10;&#9;&#9;random_events = {&#10;&#9;&#9;}&#10;&#9;&#9;effect = {&#10;&#9;&#9;}&#10;&#9;}&#10;&#9;&#10;&#9;on_yearly_pulse = {&#10;&#9;&#9;events = {&#10;&#9;&#9;}&#10;&#9;&#9;random_events = {&#10;&#9;&#9;}&#10;&#9;&#9;effect = {&#10;&#9;&#9;}&#10;&#9;}&#10;&#9;&#10;&#9;status_desc = {&#10;&#9;}&#10;}" description="Country-context Journal Entry Definition" toReformat="true" toShortenFQNames="true">
+    <variable name="journal_entry_key" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PARADOX_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="character_template_base_vic3" value="#&#10;$character_template$ = {&#10;&#9;first_name =&#10;&#9;last_name =&#10;&#9;female =&#10;&#9;dna =&#10;&#9;historical = yes&#10;&#9;birth_date =&#10;&#9;culture = cu:&#10;&#9;religion = rel:&#10;&#9;ruler/heir = yes&#10;&#9;ideology =&#10;&#9;interest_group =&#10;&#9;home_region =&#10;&#9;traits = { }&#10;}" description="Basic Character Template" toReformat="true" toShortenFQNames="true">
+    <variable name="character_template" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PARADOX_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="character_template_politician_vic3" value="#&#10;$politician_template$ = {&#10;&#9;first_name =&#10;&#9;last_name =&#10;&#9;female =&#10;&#9;dna =&#10;&#9;historical = yes&#10;&#9;birth_date =&#10;&#9;role = character_role_politician&#10;&#9;culture = cu:&#10;&#9;religion = rel:&#10;&#9;ideology =&#10;&#9;interest_group =&#10;&#9;ig_leader =&#10;&#9;home_region =&#10;&#9;traits = { }&#10;&#9;interest_group_leader_usage = {&#10;&#9;&#9;country_trigger = {&#9;}&#10;&#9;&#9;interest_group_trigger = { }&#10;&#9;&#9;earliest_usage_date =&#10;&#9;&#9;latest_usage_date =&#10;&#9;&#9;chance =&#10;&#9;}&#10;}" description="Politician Character Template" toReformat="true" toShortenFQNames="true">
+    <variable name="politician_template" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PARADOX_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="character_template_commander_vic3" value="# &#10;$commander_template$ = {&#10;&#9;first_name =&#10;&#9;last_name =&#10;&#9;female =&#10;&#9;dna =&#10;&#9;historical = yes&#10;&#9;birth_date =&#10;&#9;culture = cu:&#10;&#9;religion = rel:&#10;&#9;ideology =&#10;&#9;interest_group =&#10;&#9;is_general/is_admiral =&#10;&#9;home_region =&#10;&#9;traits = { }&#10;&#9;commander_usage = {&#10;&#9;&#9;country_trigger = {}&#10;&#9;&#9;role = general/admiral&#10;&#9;&#9;earliest_usage_date =&#10;&#9;&#9;latest_usage_date =&#10;&#9;&#9;chance =&#10;&#9;}&#10;}" description="Commander Character Template" toReformat="true" toShortenFQNames="true">
+    <variable name="commander_template" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PARADOX_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="journal_entry_contextless_vic3" value="$journal_entry_key$ = {&#10;&#9;group = je_group_&#10;&#9;icon = &quot;gfx/interface/icons/event_icons/event_&quot;&#10;&#9;weight = 100&#10;&#9;&#10;&#9;should_be_pinned_by_default_involved = yes&#10;&#9;can_revolution_inherit = yes&#10;&#9;transferable = no&#10;&#9;can_deactivate = no&#10;&#9;&#10;&#9;is_shown_in_lobby = {&#10;&#9;}&#10;&#9;&#10;&#9;scripted_progress_bar =&#10;&#9;&#10;&#9;scripted_button =&#10;&#9;&#10;&#9;is_shown_when_inactive = {&#10;&#9;}&#10;&#9;&#10;&#9;should_be_involved = {&#10;&#9;}&#10;&#9;&#10;&#9;should_show_when_not_involved = {&#10;&#9;}&#10;&#9;&#10;&#9;possible = {&#10;&#9;}&#10;&#9;&#10;&#9;immediate = {&#10;&#9;&#9;gbbf_assign_dlc_icon_effect = yes&#10;&#9;}&#10;&#9;&#10;&#9;modifiers_while_active = {&#10;&#9;}&#10;&#9;&#10;&#9;complete = {&#10;&#9;}&#10;&#9;&#10;&#9;on_complete = {&#10;&#9;}&#10;&#9;&#10;&#9;fail = {&#10;&#9;}&#10;&#9;&#10;&#9;on_fail = {&#10;&#9;}&#10;&#9;&#10;&#9;timeout =&#10;&#9;&#10;&#9;on_timeout = {&#10;&#9;}&#10;&#9;&#10;&#9;invalid = {&#10;&#9;}&#10;&#9;&#10;&#9;on_invalid = {&#10;&#9;}&#10;&#9;&#10;&#9;on_weekly_pulse = {&#10;&#9;&#9;events = {&#10;&#9;&#9;}&#10;&#9;&#9;random_events = {&#10;&#9;&#9;}&#10;&#9;&#9;effect = {&#10;&#9;&#9;}&#10;&#9;}&#10;&#9;&#10;&#9;on_monthly_pulse = {&#10;&#9;&#9;events = {&#10;&#9;&#9;}&#10;&#9;&#9;random_events = {&#10;&#9;&#9;}&#10;&#9;&#9;effect = {&#10;&#9;&#9;}&#10;&#9;}&#10;&#9;&#10;&#9;on_yearly_pulse = {&#10;&#9;&#9;events = {&#10;&#9;&#9;}&#10;&#9;&#9;random_events = {&#10;&#9;&#9;}&#10;&#9;&#9;effect = {&#10;&#9;&#9;}&#10;&#9;}&#10;&#9;&#10;&#9;status_desc = {&#10;&#9;}&#10;}" description="Contextless Journal Definition" toReformat="true" toShortenFQNames="true">
+    <variable name="journal_entry_key" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PARADOX_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="content_header_vic3" value="####---------- $TITLE$ ----------####" description="Decorative Section Header" toReformat="true" toShortenFQNames="true">
+    <variable name="TITLE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PARADOX_LOCALISATION" value="true" />
+      <option name="PARADOX_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="trigger_loc_vic3" value="$trigger$ = {&#10;&#9;global = $trigger$_trigger&#10;&#9;global_not = $trigger$_trigger_NOT&#10;&#9;first = $trigger$_trigger&#10;&#9;first_not = $trigger$_trigger_NOT&#10;&#9;third = $trigger$_trigger&#10;&#9;third_not = $trigger$_trigger_NOT&#10;}" description="Trigger Localization Definition" toReformat="true" toShortenFQNames="true">
+    <variable name="trigger" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PARADOX_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="custom_loc_vic3" value="$custom_type$ = {&#10;&#9;type = &#10;&#9;random_valid = # optional&#10;&#9;&#10;&#9;text = {&#10;&#9;&#9;trigger = {&#10;&#9;&#9;}&#10;&#9;&#9;localization_key = &#10;&#9;}&#10;&#9;text = {&#10;&#9;&#9;trigger = {&#10;&#9;&#9;}&#10;&#9;&#9;localization_key = &#10;&#9;}&#10;}&#10;&#9;" description="Customizable Localization Definition" toReformat="true" toShortenFQNames="true">
+    <variable name="custom_type" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PARADOX_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="if_vic3" value="if = {&#10;&#9;limit = {&#10;&#9;}&#10;}" description="Simple if block" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PARADOX_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="if_else_vic3" value="if = {&#10;&#9;limit = {&#10;&#9;}&#10;}&#10;else = {&#10;}" description="if block with an included else" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PARADOX_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="else_if_vic3" value="else_if = {&#10;&#9;limit = {&#10;&#9;}&#10;}" description="Simple else-if block" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PARADOX_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="if_else_if_else_vic3" value="if = {&#10;&#9;limit = {&#10;&#9;}&#10;}&#10;else_if = {&#10;&#9;limit = {&#10;&#9;}&#10;}&#10;else = {&#10;}" description="if chain with else-if and else blocks" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PARADOX_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="custom_tooltip_vic3" value="custom_tooltip = {&#10;&#9;text = &#10;&#9;&#10;}" description="Effect custom_tooltip with text parameter and indentation" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PARADOX_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="government_type_vic3" value="$gov_type$ = {&#10;&#9;transfer_of_power = &#10;&#10;&#9;male_ruler = &#10;&#9;female_ruler = &#10;&#10;&#9;possible = {&#10;&#9;}&#10;&#10;&#9;on_government_type_change = {&#10;&#9;}&#10;&#9;on_post_government_type_change = {&#10;&#9;}&#10;}" description="Government Type Definition" toReformat="true" toShortenFQNames="true">
+    <variable name="gov_type" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PARADOX_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="effect_loc_vic3" value="$effect$ = {&#10;&#9;global = $effect$_effect&#10;&#9;global_not = $effect$_effect_NOT&#10;&#9;first = $effect$_effect&#10;&#9;first_not = $effect$_effect_NOT&#10;&#9;third = $effect$_effect&#10;&#9;third_not = $effect$_effect_NOT&#10;}" description="Effect Localization Definition" toReformat="true" toShortenFQNames="true">
+    <variable name="effect" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PARADOX_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="sgui_vic3" value="$name$_sgui = {&#10;&#9;scope = country&#10;&#9;&#10;&#9;is_shown = {&#10;&#9;}&#10;&#9;&#10;&#9;is_valid = {&#10;&#9;}&#10;&#9;&#10;&#9;effect = {&#10;&#9;}&#10;}" description="SGUI definition" toReformat="true" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PARADOX_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="create_character_vic3" value="create_character = {&#10;&#9;#&#10;&#9;template =&#10;&#9;first_name =&#10;&#9;last_name =&#10;&#9;age =&#10;&#9;culture = cu:&#10;&#9;religion = rel:&#10;&#9;ideology =&#10;&#9;interest_group =&#10;&#9;traits = {&#10;&#9;}&#10;&#9;on_created = {&#10;&#9;}&#10;}" description="Effect create_character with basic parameters" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PARADOX_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="add_claim_ROOT_vic3" value="if = {&#10;&#9;limit = {&#10;&#9;&#9;NOR = {&#10;&#9;&#9;&#9;has_claim = s:$STATE$&#10;&#9;&#9;&#9;owns_entire_state_region = $STATE$&#10;&#9;&#9;}&#10;&#9;}&#10;&#9;s:$STATE$ = {&#10;&#9;&#9;add_claim = ROOT&#10;&#9;}&#10;}" description="Effect add_claim for root scope with a check for an already existing claim" toReformat="true" toShortenFQNames="true">
+    <variable name="STATE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PARADOX_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="create_character_full_vic3" value="create_character = {&#10;&#9;#&#10;&#9;template =&#10;&#9;first_name =&#10;&#9;last_name =&#10;&#9;birth_date =&#10;&#9;age =&#10;&#9;dna =&#10;&#9;culture = cu:&#10;&#9;religion = rel:&#10;&#9;female = yes&#10;&#9;noble = yes&#10;&#9;ruler = yes&#10;&#9;heir = yes&#10;&#9;historical = yes&#10;&#9;ig_leader = yes&#10;&#9;is_general = yes&#10;&#9;hq =&#10;&#9;ideology =&#10;&#9;interest_group =&#10;&#9;traits = {&#10;&#9;}&#10;&#9;on_created = {&#10;&#9;}&#10;}" description="Effect create_character with most parameters" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PARADOX_SCRIPT" value="true" />
+    </context>
+  </template>
+</templateSet>

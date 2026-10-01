@@ -1,0 +1,68 @@
+<templateSet group="Victoria 3 Localization">
+  <template name="ROOTCountryName" value="ROOT.GetCountry.GetName" description="Function GetName from ROOT" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PARADOX_LOCALISATION" value="true" />
+    </context>
+  </template>
+  <template name="NotificationLocalization" value=" notification_$notification_key$_name: &quot;&quot;&#10; notification_$notification_key$_desc: &quot;&quot;&#10; notification_$notification_key$_tooltip: &quot;#header notification_$notification_key$_name$TOOLTIP_DELIMITER$notification_$notification_key$_desc#!&quot;" description="Notification localization" toReformat="true" toShortenFQNames="true">
+    <variable name="notification_key" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TOOLTIP_DELIMITER" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PARADOX_LOCALISATION" value="true" />
+    </context>
+  </template>
+  <template name="EventLocalization" value=" $event_id$.t: &quot;&quot;&#10; $event_id$.d: &quot;&quot;&#10; $event_id$.f: &quot;&quot;&#10; $event_id$.a: &quot;&quot;&#10; $event_id$.b: &quot;&quot;" description="Event localization" toReformat="true" toShortenFQNames="true">
+    <variable name="event_id" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PARADOX_LOCALISATION" value="true" />
+    </context>
+  </template>
+  <template name="SCOPECharacter" value="SCOPE.sCharacter('')" description="Function sCharacter from TopScope" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PARADOX_LOCALISATION" value="true" />
+    </context>
+  </template>
+  <template name="JournalVar" value="JournalEntry.MakeScope.Var('')" description="Function Var from JournalEntry" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PARADOX_LOCALISATION" value="true" />
+    </context>
+  </template>
+  <template name="PlayerCountryName" value="GetPlayer.GetName" description="Function GetName from GetPlayer" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PARADOX_LOCALISATION" value="true" />
+    </context>
+  </template>
+  <template name="SCOPEState" value="SCOPE.sState('')" description="Function sState from TopScope" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PARADOX_LOCALISATION" value="true" />
+    </context>
+  </template>
+  <template name="SCOPEStateRegion" value="SCOPE.sStateRegion('')" description="Function sStateRegion from TopScope" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PARADOX_LOCALISATION" value="true" />
+    </context>
+  </template>
+  <template name="SCOPECountry" value="SCOPE.sCountry('')" description="Function sCountry from TopScope" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PARADOX_LOCALISATION" value="true" />
+    </context>
+  </template>
+  <template name="SCOPEPoliticalMovement" value="SCOPE.sPoliticalMovement('')" description="Function sPoliticalMovement from TopScope" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PARADOX_LOCALISATION" value="true" />
+    </context>
+  </template>
+  <template name="CountryValue" value="Country.MakeScope.ScriptValue('')" description="Function ScriptValue from Country" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PARADOX_LOCALISATION" value="true" />
+    </context>
+  </template>
+  <template name="SCOPEInterestGroup" value="SCOPE.gsInterestGroup('')" description="Function gsInterestGroup from TopScope" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PARADOX_LOCALISATION" value="true" />
+    </context>
+  </template>
+  <template name="AlertLocalization" value="alert_$alert_key$_name: &quot;&quot; # This is the alert name&#10;alert_$alert_key$_hint: &quot;&quot; # This is the alert desc&#10;alert_$alert_key$_action: &quot;&quot; # This is what will happen if you click the alert&#10;$alert_key$_setting_name: &quot;&quot; # This is shown in the alert settings" description="Alert localization" toReformat="true" toShortenFQNames="true">
+    <variable name="alert_key" expression="" defaultValue="" alwaysStopAt="true" />
+  </template>
+</templateSet>
